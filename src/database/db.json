@@ -11,15 +11,15 @@
       "name": "dalexa",
       "email": "dal@gmail.com",
       "password": "b1d0f65b562f4713247714adf9c47c7342c1e37e81f7146f48b040f4ab8ec89fc86a631c9586cd82f6b59cead0e482fb6c98ae0a45c78dc42de0e1139e70b28f",
-      "rol": "company",
-      "id": "2"
+      "rol": "student",
+      "id": 2
     },
     {
       "name": "esteban",
       "email": "esteban@gmail.com",
       "password": "d880c3b77c1620b2d5d83653358046d3bc932792ee361f51b9c7e6de0ed645752c2d55ab97e4171ed1482efa75c5ebe1e97dfc4c56eb18e43c1d3c218d639a63",
       "rol": "company",
-      "id": "3"
+      "id": 3
     }
   ],
   "profiles": [
@@ -42,7 +42,7 @@
       ],
       "descripcion": "Soy Pedro Picapiedra. El que pica piedra",
       "cvUrl": {},
-      "id": "1"
+      "id": 1
     },
     {
       "userId": 2,
@@ -68,53 +68,19 @@
   ],
   "vacancy": [
     {
-      "id": "17af",
       "projectName": "Flutter Developer",
-      "projectDescription": "App driver",
-      "jobType": "Tiempo completo",
-      "jobModality": "Remoto",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
       "skillsRequired": [
-        "java",
-        "postgresql",
-        "docker"
+        "flutter",
+        "kubernetes"
       ],
       "levelRequired": [
         "advanced",
-        "intermediate",
-        "advanced"
-      ]
-    },
-    {
-      "projectName": "prueba",
-      "projectDescription": "pruebita",
-      "jobType": "Tiempo completo",
-      "jobModality": "Híbrido",
-      "skillsRequired": [
-        "java",
-        "flutter"
-      ],
-      "levelRequired": [
-        "beginner",
-        "advanced"
-      ],
-      "id": "9oZfL82"
-    },
-    {
-      "projectName": "Plataforma de Gestión de Proyectos SaaS",
-      "projectDescription": "Estamos construyendo una plataforma SaaS de nueva generación para ayudar a equipos de todo el mundo a gestionar proyectos con inteligencia predictiva. Buscamos desarrolladores backend con experiencia en arquitecturas escalables, APIs RESTful y bases de datos relacionales. Es una excelente oportunidad para trabajar en un entorno ágil con tecnologías modernas, impacto real y desafíos técnicos estimulantes.",
-      "jobType": "Tiempo completo",
-      "jobModality": "Híbrido",
-      "skillsRequired": [
-        "mysql",
-        "docker",
-        "java"
-      ],
-      "levelRequired": [
-        "intermediate",
-        "intermediate",
         "intermediate"
       ],
-      "id": "sqV8G1M"
+      "id": 3
     }
   ]
 }
