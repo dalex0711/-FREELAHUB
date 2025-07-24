@@ -1,7 +1,7 @@
 import { validateInputs, validateUser, hashPass } from "../services/validations";
 import { dataEncoding, getUser } from "../services/storage";
 import { navegation } from '../router.js';
-import { showMessage } from '../services/message.js';
+import{showMessage} from '../services/message.js'
 
 // Initialize login form logic
 export function init() {
@@ -27,7 +27,7 @@ export function init() {
         // Validate empty fields
         const validatedInputs = validateInputs(email, password);
         if (!validatedInputs) {
-            showMessage('Please fill in all fields.', 'error');
+            showMessage('Por favor, rellene todos los campos.', 'error');
             return;
         }
 
@@ -37,7 +37,7 @@ export function init() {
 
         // Handle invalid credentials
         if (!user) {
-            showMessage('Invalid credentials. Please try again.', 'error');
+            showMessage('Credenciales no válidas','error')
             return;
         }
 
@@ -45,8 +45,8 @@ export function init() {
         const fullUser = await getUser(email);
         dataEncoding(fullUser);
 
-        showMessage('Login successful!', 'success');
-        debugger
+        showMessage('Inicio de sesión exitoso!', 'success');
+        
         let redirectTo;
 
             switch (fullUser.rol) {

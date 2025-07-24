@@ -2,10 +2,12 @@
 import { createIcons, icons } from 'lucide';
 import { apiRequest } from '../../api/requests.js';
 import { getUserLogged } from '../../services/storage.js';
-
+import {btnLogout} from '../../services/logout.js'
+ 
 createIcons({ icons });
 
 export async function init() {
+  btnLogout();
   setupNav();
   await loadVacancies();
 

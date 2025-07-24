@@ -1,5 +1,6 @@
 import { logoutUser } from '../services/storage.js';
 import { navegation } from '../router.js';
+import{showMessage} from '../services/message.js'
 
 // Sets up logout button functionality
 export function btnLogout() {
@@ -8,7 +9,7 @@ export function btnLogout() {
 
   logOutBtn.addEventListener('click', (event) => {
     logoutUser(); 
-    alert('Hasta pronto'); 
+    showMessage('Hasta pronto!', 'logout');
     navegation('/'); 
   });
 }
