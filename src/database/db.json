@@ -80,7 +80,83 @@
         "advanced",
         "intermediate"
       ],
+      "id": 1
+    },
+    {
+      "projectName": "Flutter Developer",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
+      "skillsRequired": [
+        "flutter",
+        "kubernetes"
+      ],
+      "levelRequired": [
+        "advanced",
+        "intermediate"
+      ],
+      "id": 2
+    },
+    {
+      "projectName": "Flutter Developer",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
+      "skillsRequired": [
+        "flutter",
+        "kubernetes"
+      ],
+      "levelRequired": [
+        "advanced",
+        "intermediate"
+      ],
       "id": 3
+    },
+    {
+      "projectName": "Flutter Developer",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
+      "skillsRequired": [
+        "flutter",
+        "kubernetes"
+      ],
+      "levelRequired": [
+        "advanced",
+        "intermediate"
+      ],
+      "id": 4
+    },
+    {
+      "projectName": "Flutter Developer",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
+      "skillsRequired": [
+        "flutter",
+        "kubernetes"
+      ],
+      "levelRequired": [
+        "advanced",
+        "intermediate"
+      ],
+      "id": 3
+    },
+    {
+      "projectName": "Flutter Developer",
+      "projectDescription": "Aplicacion",
+      "jobType": "Proyecto temporal",
+      "jobModality": "Presencial",
+      "skillsRequired": [
+        "flutter",
+        "kubernetes"
+      ],
+      "levelRequired": [
+        "advanced",
+        "intermediate"
+      ],
+      "id": 4
     }
-  ]
+  ],
+  "applications": []
 }

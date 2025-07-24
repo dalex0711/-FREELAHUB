@@ -1,3 +1,4 @@
+// src/pages/home/home.js
 import { createIcons, icons } from 'lucide';
 import { apiRequest } from '../../api/requests.js';
 import { getUserLogged } from '../../services/storage.js';
@@ -8,35 +9,49 @@ export async function init() {
   setupNav();
   await loadVacancies();
 
-  // Eventos para ver solo aplicaciones
   document.getElementById('view-applications-desktop')?.addEventListener('click', async (e) => {
     e.preventDefault();
     await loadApplicationsOnly();
-    document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' });
+    scrollToWithOffset(document.getElementById('offers'));
   });
 
   document.getElementById('view-applications-mobile')?.addEventListener('click', async (e) => {
     e.preventDefault();
     await loadApplicationsOnly();
-    document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' });
+    scrollToWithOffset(document.getElementById('offers'));
   });
 }
 
-// Configuración del navbar
+function scrollToWithOffset(element) {
+  if (!element) return;
+
+  // Altura real del header
+  const header = document.querySelector('header');
+  const headerHeight = header ? header.offsetHeight : 0;
+
+  // Valor de compensación adicional manual
+  const extraOffset = 150; 
+
+  const y = element.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraOffset;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+}
+
+
 function setupNav() {
   document.getElementById('menu-toggle')?.addEventListener('click', () => {
     document.getElementById('mobile-menu')?.classList.toggle('hidden');
   });
-  
-    // Ruta activa
-    const currentPath = location.pathname;
-    document.querySelectorAll('.nav-link').forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.classList.add('active');
-      }
-    });
 
- 
+  const currentPath = location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
 
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
@@ -50,22 +65,21 @@ function setupNav() {
   });
 }
 
-// Cargar todas las vacantes
 async function loadVacancies() {
   const title = document.getElementById('offers-title');
   const subtitle = document.getElementById('offers-subtitle');
   if (title) title.textContent = 'Ofertas disponibles para ti';
   if (subtitle) subtitle.textContent = 'Postúlate a proyectos reales publicados por empresas y aliados.';
 
+  document.querySelector('#extra-content')?.classList?.remove('hidden');
+
   const user = getUserLogged();
   const userId = user?.id;
   if (!userId) return;
 
-  document.querySelector('#offers')?.classList.remove('hidden');
-  document.querySelector('#extra-content')?.classList?.remove('hidden');
-
   const container = document.querySelector('#offers');
   const template = document.querySelector('#job-card-template');
+  container.classList.remove('hidden');
   container.innerHTML = '';
 
   try {
@@ -140,18 +154,17 @@ async function loadVacancies() {
   }
 }
 
-// Mostrar solo las vacantes aplicadas
 async function loadApplicationsOnly() {
   const title = document.getElementById('offers-title');
   const subtitle = document.getElementById('offers-subtitle');
   if (title) title.textContent = 'Tus postulaciones';
   if (subtitle) subtitle.textContent = 'Estas son las vacantes a las que te has postulado.';
 
+  document.querySelector('#extra-content')?.classList?.add('hidden');
+
   const user = getUserLogged();
   const userId = user?.id;
   if (!userId) return;
-
-  document.querySelector('#extra-content')?.classList?.add('hidden');
 
   const container = document.querySelector('#offers');
   const template = document.querySelector('#job-card-template');
@@ -166,6 +179,14 @@ async function loadApplicationsOnly() {
 
     const appliedIds = applications.map(app => String(app.vacancyId));
     const appliedOffers = offers.filter(offer => appliedIds.includes(String(offer.id)));
+
+    if (appliedOffers.length === 0) {
+      const msg = document.createElement('p');
+      msg.textContent = 'Aún no te has postulado a ninguna vacante.';
+      msg.className = 'text-slate-500 text-center py-6';
+      container.appendChild(msg);
+      return;
+    }
 
     appliedOffers.forEach(offer => {
       const clone = template.content.cloneNode(true);
@@ -217,7 +238,6 @@ async function loadApplicationsOnly() {
   }
 }
 
-// Cambia visual del botón según estado
 function updateButtonVisual(button, applied) {
   const iconHtml = `<i data-lucide="send" class="w-3 h-3"></i>`;
   if (applied) {
@@ -232,14 +252,3 @@ function updateButtonVisual(button, applied) {
 
   createIcons({ icons });
 }
-
-// Debug (opcional)
-window.addEventListener('beforeunload', () => {
-  console.warn('La página se va a recargar');
-});
-
-document.addEventListener('click', (e) => {
-  const target = e.target.closest('a, button');
-  if (!target) return;
-  console.log(' Click en:', target.tagName, target.outerHTML);
-});
