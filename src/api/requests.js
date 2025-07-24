@@ -1,5 +1,3 @@
-
-
 const apiUrl = 'http://localhost:3000/';
 
 // General-purpose API request function
@@ -34,7 +32,7 @@ export async function apiRequest(method, endpoint = '', body = null) {
   } catch (error) {
     // Log a user-friendly error message
     const message = error.statusText || "An error has occurred";
-    showMessage(`Error ${error.status}: ${message}`, 'error');
+    alert(`Error ${error.status}: ${message}`, 'error');
     throw error;
   }
 }

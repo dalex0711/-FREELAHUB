@@ -3,8 +3,17 @@ import { apiRequest } from '../api/requests.js';
 
 // Checks if all inputs are non-empty and valid
 export function validateInputs(...inputs) {
-  return inputs.every(input => input !== null && input !== undefined && input.trim() !== '');
-};
+  return inputs.every(input => {
+    if (typeof input === 'string') {
+      return input.trim() !== '';
+    }
+    if (Array.isArray(input)) {
+      return input.length > 0;
+    }
+    return input !== null && input !== undefined;
+  });
+}
+
 
 // Validates password rules: uppercase, lowercase, special character, min length
 export function validatePassword(pass) {

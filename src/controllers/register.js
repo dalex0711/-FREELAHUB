@@ -1,7 +1,7 @@
 import { emailExists, validateInputs, validatePassword, hashPass } from '../services/validations.js';
 import { apiRequest } from '../api/requests.js';
 import { navegation } from '../router.js';
-import { showMessage } from '../services/message.js';
+import{showMessage} from '../services/message.js'
 
 
 // Initialize register form behavior
@@ -30,24 +30,25 @@ export function init() {
 
     // Validate empty fields
     if (!inputsValidator) {
-      showMessage('All fields are required', 'error');
+      showMessage('Por favor, rellene todos los campos.', 'error');
       return;
     }
 
     // Validate password strength
     if (!passwordValidator) {
-        showMessage('Password must include uppercase, lowercase, special character and be at least 5 characters long', 'error');
+        showMessage('La contraseña debe incluir al menos una letra mayúscula.', 'error');
       return;
     }
 
     // Check if email already exists
     if (await emailExists(email)) {
-      showMessage('Email is already registered', 'error');
+      showMessage('El correo electrónico ya está registrado', 'error');
       return;
     }
 
     // Register new user
     const hashedPassword = hashPass(password);
+    showMessage('La cuenta ha sido creada exitosamente.','success')
     await apiRequest('POST', 'users', {
       name,
       email,

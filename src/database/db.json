@@ -11,7 +11,7 @@
       "name": "dalexa",
       "email": "dal@gmail.com",
       "password": "b1d0f65b562f4713247714adf9c47c7342c1e37e81f7146f48b040f4ab8ec89fc86a631c9586cd82f6b59cead0e482fb6c98ae0a45c78dc42de0e1139e70b28f",
-      "rol": "student",
+      "rol": "company",
       "id": 2
     },
     {
@@ -20,143 +20,182 @@
       "password": "d880c3b77c1620b2d5d83653358046d3bc932792ee361f51b9c7e6de0ed645752c2d55ab97e4171ed1482efa75c5ebe1e97dfc4c56eb18e43c1d3c218d639a63",
       "rol": "company",
       "id": 3
+    },
+    {
+      "id": "44ae",
+      "name": "jose",
+      "email": "jose@gmail.com",
+      "password": "4601848aa97f13bf579bbf34f3a81157b1588708cd50a916f2b78d2a9acced9d7915240586fd24d8ac9fa5287616a6430ce6645971ab9b2312bb83a0d9a43b1d",
+      "rol": "student"
     }
   ],
   "profiles": [
     {
-      "userId": 1,
-      "name": "Pedro Picapiedra",
-      "cellPhone": "3002150003",
-      "mail": "pedro@pica.com",
+      "id": "3737",
+      "userId": "44ae",
+      "name": "da",
+      "cellPhone": "3003",
+      "mail": "joseww@gmail.com",
       "city": "barranquilla",
-      "institution": "riwi",
-      "program": "picar piedra",
+      "institution": "riwwi",
+      "program": "desa",
       "skills": [
-        "js",
-        "css",
-        "html"
+        "s"
       ],
       "languages": [
-        "español",
-        "ingles"
+        "ss"
       ],
-      "descripcion": "Soy Pedro Picapiedra. El que pica piedra",
-      "cvUrl": {},
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "name": "Dalexa Sanjuan",
-      "cellPhone": "3002150337",
-      "mail": "dal@gmail.com",
-      "city": "Barranquilla",
-      "institution": "Riwi",
-      "program": "Desarrollo de software",
-      "skills": [
-        "Js",
-        "html",
-        "css"
-      ],
-      "languages": [
-        "español",
-        "ingles"
-      ],
-      "descripcion": "Hola, soy dalexa, tengo 20 años...",
-      "cvUrl": {},
-      "id": "2"
+      "descripcion": "sdasda",
+      "cvUrl": {}
     }
   ],
   "vacancy": [
     {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
-      "jobType": "Proyecto temporal",
+      "id": "1",
+      "projectName": "Desarrollador junior",
+      "projectDescription": "Experiencia comprobable con TypeScript, React y Redux. conocimientos en metodologías ágiles (Scrum, Kanban, XP) ",
+      "jobType": "Freelance",
       "jobModality": "Presencial",
       "skillsRequired": [
-        "flutter",
-        "kubernetes"
+        "react",
+        "nodejs"
       ],
       "levelRequired": [
-        "advanced",
+        "beginner",
         "intermediate"
-      ],
-      "id": 1
+      ]
     },
     {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
-      "jobType": "Proyecto temporal",
-      "jobModality": "Presencial",
+      "id": "2",
+      "projectName": "Desarollador Full Stack",
+      "projectDescription": "Diseño y desarrollo de microservicios utilizando Serverless Framework sobre AWS Lambda, API Gateway, aplicando patrones de diseño OOP",
+      "jobType": "Tiempo completo",
+      "jobModality": "Híbrido",
       "skillsRequired": [
-        "flutter",
-        "kubernetes"
+        "java",
+        "mysql"
       ],
       "levelRequired": [
-        "advanced",
-        "intermediate"
-      ],
-      "id": 2
+        "intermediate",
+        "advanced"
+      ]
     },
     {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
-      "jobType": "Proyecto temporal",
-      "jobModality": "Presencial",
+      "id": "3",
+      "projectName": " Developer and Data Engineer",
+      "projectDescription": "WinDifferent specializes in helping businesses achieve rapid and sustainable growth through our powerful proprietary marketing system. Our data-driven solutions generate positive",
+      "jobType": "Tiempo completo",
+      "jobModality": "Remoto",
       "skillsRequired": [
-        "flutter",
-        "kubernetes"
+        "python",
+        "javascript"
       ],
       "levelRequired": [
         "advanced",
-        "intermediate"
-      ],
-      "id": 3
+        "beginner"
+      ]
     },
     {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
+      "id": "4",
+      "projectName": "Desarrollador Junior Java",
+      "projectDescription": " Poseer técnicamente diferentes módulos de la plataforma, incluyendo el diseño, desarrollo e integración.\n",
       "jobType": "Proyecto temporal",
       "jobModality": "Presencial",
       "skillsRequired": [
-        "flutter",
-        "kubernetes"
+        "mysql",
+        "java"
       ],
       "levelRequired": [
-        "advanced",
+        "beginner",
         "intermediate"
-      ],
-      "id": 4
-    },
-    {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
-      "jobType": "Proyecto temporal",
-      "jobModality": "Presencial",
-      "skillsRequired": [
-        "flutter",
-        "kubernetes"
-      ],
-      "levelRequired": [
-        "advanced",
-        "intermediate"
-      ],
-      "id": 3
-    },
-    {
-      "projectName": "Flutter Developer",
-      "projectDescription": "Aplicacion",
-      "jobType": "Proyecto temporal",
-      "jobModality": "Presencial",
-      "skillsRequired": [
-        "flutter",
-        "kubernetes"
-      ],
-      "levelRequired": [
-        "advanced",
-        "intermediate"
-      ],
-      "id": 4
+      ]
     }
   ],
-  "applications": []
+  "applications": [
+    {
+      "id": "36a2",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "5518",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "c5b0",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "2c2a",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "194c",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "524e",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "d4e3",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "0ada",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "cc42",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "70af",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "4022",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "764c",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "bd2a",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "fd7e",
+      "userId": null,
+      "vacancyId": 2
+    },
+    {
+      "id": "da26",
+      "userId": null,
+      "vacancyId": 4
+    },
+    {
+      "id": "982d",
+      "userId": null,
+      "vacancyId": 1
+    },
+    {
+      "id": "b7a1",
+      "userId": null,
+      "vacancyId": 2
+    }
+  ]
 }

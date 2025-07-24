@@ -6,11 +6,13 @@ export function showMessage(sms,type){
 switch (type) {
 
   case 'error':
-    Swal.fire({
-    icon: "error",
-    title: sms,
-    text: "Intente de nuevo!",
-    
+      Swal.fire({
+      icon: "error",
+      title: sms,
+      text: "¡Intente de nuevo!",
+      timer: 2000,
+      showConfirmButton: false,
+      timerProgressBar: true 
     });
       break;
   
@@ -34,7 +36,7 @@ switch (type) {
       </div>
     `,
     background: '#ffffff',
-    timer: 3000,
+    timer: 2000,
     timerProgressBar: true,
     showConfirmButton: false,
     customClass: {
