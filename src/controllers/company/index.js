@@ -1,4 +1,5 @@
 import { apiRequest } from '../../api/requests.js';
+import {btnLogout} from '../../services/logout.js'
 
 const hideButton = document.querySelectorAll('.hideButton');
 const hideButton2 = document.querySelectorAll('.hideButton2');
@@ -179,3 +180,7 @@ document.addEventListener('click', async (e) => {
     }
   }
 });
+export async function init() {
+  
+  btnLogout();
+}

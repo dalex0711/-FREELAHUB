@@ -5,10 +5,10 @@ import { getUserLogged } from '../../services/storage.js';
 import {btnLogout} from '../../services/logout.js'
 
 createIcons({ icons });
-btnLogout();
 let allOffers = []; // Global para filtrar
 
 export async function init() {
+  btnLogout();
   setupNav();
   await loadVacancies();
 

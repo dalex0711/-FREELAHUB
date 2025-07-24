@@ -10,6 +10,7 @@ const routes = {
     '/student': 'src/views/student/index.html',
     '/company': 'src/views/company/index.html',
     '/profile': 'src/views/student/profile.html',
+    '/admin': 'src/views/admin/dashboard.html', 
 };
 // Maps each path to its JavaScript controller
 
@@ -21,6 +22,7 @@ const controllers = {
     '/student': './controllers/student/index.js',
     '/company'  : './controllers/company/index.js',
     '/profile'  : './controllers/student/profile.js',
+    '/admin'    : './controllers/admin/dashboard.js', 
 };
 
 
@@ -70,7 +72,7 @@ function checkAcces(path, user) {
             case 'student':
                 return '/student';
             }
-}
+        }
         return user ? '/404' : '/login';
     }
 
@@ -78,19 +80,20 @@ function checkAcces(path, user) {
 }
 
 // Main navigation handler
-export function navegation(path) {
-   
+export function navegation(path, updateHistory = true) {
     const user = getUserLogged();
     const accessRoute = checkAcces(path, user);
 
     if (!accessRoute) return;
-    history.pushState(null, null, accessRoute);
+    if (updateHistory) {
+        history.pushState(null, null, accessRoute);
+    }
     loadView(accessRoute);
 }
 
 // Handles browser back/forward button
 window.addEventListener('popstate', () => {
-    navegation(location.pathname);
+    navegation(location.pathname, false);
 });
 
 // Intercepts <a data-link> clicks for SPA routing
@@ -99,11 +102,14 @@ export function navegationTag() {
         const elemento = event.target.closest('[data-link]');
         if (!elemento) return;
 
+        const path = elemento.getAttribute('href') || elemento.getAttribute('data-link');
+        // Ignora anchors internos
+        if (path && path.startsWith('#')) return;
+
         event.preventDefault();
 
-        const path = elemento.getAttribute('href') || elemento.getAttribute('data-link');
         if (path) {
-            navegation(path);
+            navegation(path, true);
         }
     });
 }

@@ -8,10 +8,11 @@
 
     <!-- Menú principal (escritorio) -->
     <ul class="hidden md:flex space-x-6 text-sm font-medium text-slate-700">
-      <li><a href="/student" class="nav-link hover:text-blue-600 transition">Home</a></li>
+      <li><a href="/student" class="nav-link hover:text-blue-600 transition">Inicio</a></li>
       <li><a href="#offers" class="nav-link hover:text-blue-600 transition">Ofertas</a></li>
       <li><a href="#" id="view-applications-desktop" class="nav-link hover:text-blue-600 transition">Aplicaciones</a></li>
       <li><a href="/profile" class="nav-link hover:text-blue-600 transition" data-link>Perfil</a></li>
+      <li><a href="#trending-topping">Tendencia</a></li> 
     </ul>
 
     <!-- Acciones -->
@@ -46,7 +47,7 @@
     <main class="pt-15 bg-white min-h-screen"> 
     
       <!-- Hero + Coders destacados -->
-      <section  id="hero-section" class="relative bg-gradient-to-br from-blue-50 to-white border-b border-slate-200 py-5">
+      <section  id="hero-section" class="relative bg-gradient-to-br from-blue-50 to-white border-b border-slate-200 py-30">
         <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
           
           <!-- Texto motivacional -->
@@ -186,6 +187,103 @@
     </footer>
   </article>
 </template>
+
+<section id="trending-topping" class="relative bg-gradient-to-b from-blue-50 to-white py-16 border-t border-slate-200 mt-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Encabezado -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-800 mb-2">Trending Topics</h2>
+      <p class="text-slate-600 text-base sm:text-lg">Lenguajes y temas de programación más populares</p>
+    </div>
+
+    <!-- Lenguajes principales -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Tarjetas de lenguaje -->
+      <a href="https://roadmap.sh/javascript" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-blue-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-blue-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-blue-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">JavaScript</span>
+      </a>
+      <a href="https://roadmap.sh/python" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-sky-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-sky-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-sky-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Python</span>
+      </a>
+      <a href="https://roadmap.sh/typescript" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-blue-500 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-blue-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-blue-500"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">TypeScript</span>
+      </a>
+      <a href="https://roadmap.sh/java" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-yellow-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-yellow-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-yellow-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Java</span>
+      </a>
+      <a href="https://roadmap.sh/csharp" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-purple-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-purple-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-purple-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">C#</span>
+      </a>
+      <a href="https://roadmap.sh/rust" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-orange-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-orange-50 p-2 rounded mr-3">
+          <i data-lucide="file-code" class="w-5 h-5 text-orange-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Rust</span>
+      </a>
+    </div>
+
+    <!-- Subtítulo -->
+    <div class="mt-14 mb-4 text-center">
+      <h3 class="text-2xl font-semibold text-slate-800">Tecnologías Populares</h3>
+      <p class="text-slate-600 text-sm">Herramientas y plataformas que todo desarrollador debería conocer</p>
+    </div>
+
+    <!-- Tecnologías -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <a href="https://roadmap.sh/react" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-sky-300 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-sky-50 p-2 rounded mr-3">
+          <i data-lucide="atom" class="w-5 h-5 text-sky-300"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">React</span>
+      </a>
+      <a href="https://roadmap.sh/docker" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-blue-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-blue-50 p-2 rounded mr-3">
+          <i data-lucide="container" class="w-5 h-5 text-blue-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Docker</span>
+      </a>
+      <a href="https://roadmap.sh/aws" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-yellow-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-yellow-50 p-2 rounded mr-3">
+          <i data-lucide="cloud" class="w-5 h-5 text-yellow-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">AWS</span>
+      </a>
+      <a href="https://roadmap.sh/kubernetes" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-purple-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-purple-50 p-2 rounded mr-3">
+          <i data-lucide="network" class="w-5 h-5 text-purple-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Kubernetes</span>
+      </a>
+      <a href="https://roadmap.sh/graphql" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-pink-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-pink-50 p-2 rounded mr-3">
+          <i data-lucide="network" class="w-5 h-5 text-pink-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">GraphQL</span>
+      </a>
+      <a href="https://roadmap.sh/git" target="_blank" class="trending-card bg-white rounded-xl p-4 border-l-4 border-rose-400 flex items-center shadow-sm hover:shadow-md transition">
+        <div class="bg-rose-50 p-2 rounded mr-3">
+          <i data-lucide="git-branch" class="w-5 h-5 text-rose-400"></i>
+        </div>
+        <span class="text-sm font-medium text-gray-800 truncate">Git</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 
 
