@@ -1,106 +1,325 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-<div class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <img src="../../public/picture/logo.png" alt="logo" class="w-20 h-20">
+                </div>
+                </div>
 
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-      <div class="flex lg:flex-1">
-        <a data-link href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">FreelaHub</span>
-          <img src="../../public/picture/logo.png" alt="FreelaHub Logo" class="h-8 w-auto" />
-        </a>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a data-link href="#training-top" class="text-sm font-semibold text-gray-900">Top estudiantes</a>
-        <a data-link href="#topics" class="text-sm font-semibold text-gray-900">Trending topics</a>
-        <a data-link href="#requisitos" class="text-sm font-semibold text-gray-900">Requisitos por perfil</a>
-        <a data-link href="/register" class="text-sm font-semibold text-gray-900">Para empresas</a>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a data-link href="/login" class="text-sm font-semibold text-gray-900 mr-4 rounded-md hover:bg-indigo-500 p-4">Ingresar</a>
-        <a data-link href="/register" class="text-sm font-semibold text-gray-900 rounded-md hover:bg-indigo-500 p-4">Registrase</a>
-      </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#top-estudiantes" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                            Top estudiantes
+                        </a>
+                        <a  href="#trending-topics"  class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                            Trending topics
+                        </a>
+                        <a href="#rutas" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                            Rutas por perfil
+                        </a>
+                        <a href="#empresas" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                            Para empresas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/login" class="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium">
+                        Ingresar
+                    </a>
+                    <a href="/register" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Registrarse
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 p-2 rounded-md">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero -->
-  <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
-      <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Conecta talento con proyectos reales</h1>
-      <p class="mt-6 text-lg text-gray-600 sm:text-xl">FreelaHub permite a empresas publicar proyectos con cupos por perfil. Estudiantes y freelancers aplican según su área técnica. Ideal para instituciones y bootcamps.</p>
-      <div class="mt-10 flex justify-center gap-x-6">
-        <a data-link class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500" href="/login">Soy empresa <span aria-hidden="true">→</span></a>
-        <a data-link href="/login" class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Soy estudiante <span aria-hidden="true">→</span></a>
-      </div>
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-violet-50 to-orange-50 relative overflow-hidden">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center">
+            <div class="space-y-8 w-full">
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Donde el talento 
+                        <span class="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
+                            compite
+                        </span> 
+                        y se conecta con el futuro
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        TalentArena impulsa a estudiantes a destacar a través de retos, rankings y rutas de aprendizaje
+                        ligadas a oportunidades laborales reales.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/login" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg rounded-md flex items-center justify-center">
+                        Soy estudiante
+                        <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a class="border-2 border-gray-300 hover:border-blue-500 px-8 py-3 text-lg bg-transparent rounded-md">
+                        Soy empresa
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+    <div class="absolute -bottom-8 -left-4 w-72 h-72 bg-gradient-to-r from-violet-400 to-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+</section>
 
-  <!-- Top Students -->
-  <section id="training-top" class="bg-gray-50 py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">🏆 Top estudiantes de la semana</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="text-lg font-semibold text-gray-900">Ana Ríos</h3>
-          <p class="text-sm text-gray-600">Especialidad: Backend</p>
-          <p class="mt-2 text-indigo-600 font-bold text-xl">98 pts</p>
+    <!-- Top Students Section -->
+    <section id="top-estudiantes" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2">Top estudiantes de la semana</h2>
+            <p class="text-lg text-center text-gray-600 mb-12">Los talentos que están marcando la diferencia</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Student 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="user" class="w-10 h-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">María González</h3>
+                    <p class="text-gray-600 mb-4">Frontend Developer</p>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-2xl font-bold text-blue-600">2850</p>
+                        <p class="text-sm text-gray-500">puntos</p>
+                    </div>
+                </div>
+                
+                <!-- Student 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="user" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Carlos Rodríguez</h3>
+                    <p class="text-gray-600 mb-4">UX Designer</p>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-2xl font-bold text-blue-600">2720</p>
+                        <p class="text-sm text-gray-500">puntos</p>
+                    </div>
+                </div>
+                
+                <!-- Student 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="user" class="w-10 h-10 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Ana Martínez</h3>
+                    <p class="text-gray-600 mb-4">QA Engineer</p>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-2xl font-bold text-blue-600">2680</p>
+                        <p class="text-sm text-gray-500">puntos</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="text-lg font-semibold text-gray-900">Luis Gómez</h3>
-          <p class="text-sm text-gray-600">Especialidad: Frontend</p>
-          <p class="mt-2 text-indigo-600 font-bold text-xl">95 pts</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="text-lg font-semibold text-gray-900">María Torres</h3>
-          <p class="text-sm text-gray-600">Especialidad: UX/UI</p>
-          <p class="mt-2 text-indigo-600 font-bold text-xl">93 pts</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Trending Topics -->
-  <section id="topics" class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">🔥 Trending topics de la semana</h2>
-      <div class="space-y-6">
-        <div class="border-b pb-4">
-          <h3 class="text-xl font-semibold text-indigo-700">Async/Await en JavaScript</h3>
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
+    <!-- Trending Topics -->
+    <section id="trending-topics" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2">Trending Topics</h2>
+            <p class="text-lg text-center text-gray-600 mb-12">Los temas más populares esta semana</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Topic 1 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <div class="flex justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">+25%</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">React Hooks Avanzados</h3>
+                    <p class="text-gray-600">12.5k visualizaciones</p>
+                </div>
+                
+                <!-- Topic 2 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <div class="flex justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">+18%</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Diseño de APIs REST</h3>
+                    <p class="text-gray-600">9.8k visualizaciones</p>
+                </div>
+                
+                <!-- Topic 3 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <div class="flex justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">+32%</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Testing Automatizado</h3>
+                    <p class="text-gray-600">8.2k visualizaciones</p>
+                </div>
+                
+                <!-- Topic 4 -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <div class="flex justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">+15%</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">UX Research Methods</h3>
+                    <p class="text-gray-600">7.1k visualizaciones</p>
+                </div>
+            </div>
         </div>
-        <div class="border-b pb-4">
-          <h3 class="text-xl font-semibold tex t-indigo-700">React Hooks Básicos</h3>
-          <a href="https://react.dev/learn" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
-        </div>
-        <div class="border-b pb-4">
-          <h3 class="text-xl font-semibold text-indigo-700">Testing con Jest</h3>
-          <a href="https://jestjs.io/docs/getting-started" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Requerimientos por perfil -->
-  <section id="requisitos" class="bg-gray-50 py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">💼 Requerimientos por perfil</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-gray-800">Frontend</h3>
-          <p class="text-gray-600 mt-2">Buscamos estudiantes con conocimientos en React y Tailwind para prototipar una landing institucional.</p>
-          <p class="mt-2 text-sm text-gray-500">Nivel sugerido: Intermedio</p>
+    <!-- Learning Paths -->
+    <section  id="rutas" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2">Empieza tu camino hacia el perfil ideal</h2>
+            <p class="text-lg text-center text-gray-600 mb-12">Rutas de aprendizaje personalizadas para cada especialidad</p>
+            
+            <div class="space-y-8">
+                <!-- Path 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-xl mb-2">Frontend Developer</h3>
+                    <p class="text-gray-600 mb-4">Domina React, TypeScript y las mejores prácticas de desarrollo frontend</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                    <button class="text-blue-600 font-medium flex items-center">
+                        Comenzar ruta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Path 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-xl mb-2">UX Designer</h3>
+                    <p class="text-gray-600 mb-4">Aprende diseño centrado en el usuario y herramientas de prototipado</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">User Research</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Prototyping</span>
+                    </div>
+                    <button class="text-blue-600 font-medium flex items-center">
+                        Comenzar ruta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Path 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-xl mb-2">QA Engineer</h3>
+                    <p class="text-gray-600 mb-4">Especialízate en testing automatizado y aseguramiento de calidad</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Selenium</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Jest</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Cypress</span>
+                    </div>
+                    <button class="text-blue-600 font-medium flex items-center">
+                        Comenzar ruta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold text-gray-800">QA / Testing</h3>
-          <p class="text-gray-600 mt-2">Requerimos 1 tester para validar flujos en un proyecto Node/Express.</p>
-          <p class="mt-2 text-sm text-gray-500">Nivel sugerido: Principiante</p>
+    </section>
+
+    <!-- For Companies -->
+    <section id="empresas" class="py-16 px-4 bg-blue-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">¿Buscas talento joven con ganas de crecer?</h2>
+            <p class="text-lg text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+                Conecta con los estudiantes más destacados y encuentra el talento perfecto para tu empresa.
+            </p>
+            
+            <div class="bg-white p-6 rounded-lg border border-blue-200 max-w-2xl mx-auto">
+                <ul class="space-y-4 mb-6">
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                        <span>Acceso a estudiantes destacados con habilidades verificadas</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                        <span>Publicación de perfiles ideales y requisitos específicos</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"></i>
+                        <span>Reportes automáticos de progreso y competencias</span>
+                    </li>
+                </ul>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium">
+                    Publicar perfiles ideales
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="dark:bg-gray-100 dark:text-gray-900">
+    <!-- Testimonial -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-3xl mx-auto text-center">
+            <blockquote class="text-2xl italic text-gray-800 mb-6">
+                "En TalentArena descubrí que competir me hizo mejor cada semana. Los retos me prepararon para conseguir mi primer trabajo en tech."
+            </blockquote>
+            <p class="font-bold">— Laura Pérez</p>
+            <p class="text-gray-600">Estudiante Riwi, ahora Frontend Developer en Platzi</p>
+        </div>
+    </section>
 
-  </footer>
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Platform -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Plataforma</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Acerca de</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Soporte</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">somos@talentarena.com</li>
+                        <li class="text-gray-400">+57 300 123 4567</li>
+                        <li class="text-gray-400">Medellín, Colombia</li>
+                    </ul>
+                </div>
+                
+                <!-- Social -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">© 2025 TalentArena. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>

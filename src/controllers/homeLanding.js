@@ -1,5 +1,7 @@
-export function init() {
+import { createIcons, icons } from 'lucide';
 
+export function init() {
+   createIcons({ icons });
     document.addEventListener('click', function (event) {
         const elemento = event.target.closest('[data-link]');
         if (!elemento) return;
